@@ -1,0 +1,25 @@
+@use "margins";
+
+:root {
+  --primary-color: #329CFF;
+  --light-color: #FFFFFF;
+  --light-gray: #D4D4D4;
+  --light-blue: #E1F1FF;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter Semi Bold", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}

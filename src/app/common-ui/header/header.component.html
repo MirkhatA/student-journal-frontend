@@ -1,0 +1,11 @@
+<nav class="header">
+  <div *ngFor="let menuItem of menuItems">
+    <a
+      [routerLink]="menuItem.link"
+      class="header-btn p16"
+    >
+      {{ menuItem.label }}
+    </a>
+  </div>
+</nav>
+

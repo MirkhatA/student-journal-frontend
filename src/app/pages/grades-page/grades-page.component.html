@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="container">
+  <app-course-header-component
+    title="Grades"
+    (addEvent)="onAddGrade()"
+  ></app-course-header-component>
+
+  <app-course-table-component
+    [columns]="['id', 'studentId', 'subject', 'score', 'createdAt']"
+    [data]="grades"
+    [actions]="gradeActions"
+  ></app-course-table-component>
+</div>

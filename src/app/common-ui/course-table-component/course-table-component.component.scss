@@ -1,0 +1,15 @@
+.course-table {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--light-gray);
+  border-collapse: collapse;
+
+
+
+  th, td {
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    text-align: start;
+    font-size: 14px;
+  }
+}

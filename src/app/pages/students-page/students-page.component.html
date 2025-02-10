@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="container">
+  <app-course-header-component
+    title="Students"
+    (addEvent)="onAddStudent()"
+  ></app-course-header-component>
+
+  <app-course-table-component
+    [columns]="['id', 'firstName', 'lastName', 'groupId', 'createdAt']"
+    [data]="students"
+    [actions]="studentActions"
+  ></app-course-table-component>
+</div>
