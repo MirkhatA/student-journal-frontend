@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="container">
+  <h1 class="mt16 mb16">Group {{ groupName }}</h1>
+
+  <table class="course-table">
+    <thead>
+    <tr>
+      <th>Action</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+      <td>
+        <button class="action-btn" (click)="editStudent(student)">✏️</button>
+        <button class="action-btn" (click)="deleteStudent(student)">🗑️</button>
+      </td>
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

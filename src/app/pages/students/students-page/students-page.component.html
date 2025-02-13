@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="container">
+  <app-course-header-component
+    title="Students"
+    (addEvent)="onAddStudent()"
+    [enableSearch]="true"
+    (searchEvent)="onSearchStudents($event)"
+  ></app-course-header-component>
+
+  <div class="container">
+    <div class="course-table-container">
+      <table class="course-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Group</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>
+              <button class="action-btn" (click)="editStudent(student)">✏️</button>
+              <button class="action-btn" (click)="deleteStudent(student)">🗑️</button>
+              <button class="action-btn" (click)="getAllGrades(student)">Grades</button>
+            </td>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.lastName }}</td>
+            <td>{{ student.groupId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

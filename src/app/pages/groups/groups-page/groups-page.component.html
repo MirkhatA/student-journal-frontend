@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<div class="container">
+  <app-course-header-component
+    title="Groups"
+    (addEvent)="onAddGroup()"
+  ></app-course-header-component>
+
+  <div class="container">
+    <div class="course-table-container">
+      <table class="course-table">
+        <thead>
+        <tr>
+          <th>Action</th>
+          <th>Group Name</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let group of groups">
+          <td>
+            <button class="action-btn" (click)="editGroup(group)">✏️</button>
+            <button class="action-btn" (click)="deleteGroup(group)">🗑️</button>
+          </td>
+          <td>{{ group.name }}</td>
+          <td>
+            <button class="action-btn" (click)="goToGroupStudents(group.id)">See all students</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

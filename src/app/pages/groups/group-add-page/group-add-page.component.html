@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="container ">
+  <h1 class="mb16 mt16">{{ groupId ? 'Edit Group' : 'Add Group' }}</h1>
+
+  <form [formGroup]="groupForm" (ngSubmit)="onSubmit()" class="edit-form">
+    <label>Group name</label>
+    <input type="text" formControlName="name" required />
+
+    <button class="submit-btn" type="submit" [disabled]="groupForm.invalid">
+      {{ groupId ? 'Update' : 'Add' }}
+    </button>
+  </form>
+</div>

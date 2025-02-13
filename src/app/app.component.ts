@@ -1,7 +1,6 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {ApiService} from './data/services/api.service';
-import {GradesService} from './data/services/grades.service';
+import {GradesService} from './common/services/grades.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,7 @@ import {GradesService} from './data/services/grades.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   grades: any[] = [];
   gradesService = inject(GradesService)
 

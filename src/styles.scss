@@ -4,6 +4,7 @@
   --primary-color: #329CFF;
   --light-color: #FFFFFF;
   --light-gray: #D4D4D4;
+  --dark-gray: #535353;
   --light-blue: #E1F1FF;
 }
 
@@ -22,4 +23,71 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.course-table {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--light-gray);
+  border-collapse: collapse;
+
+  th, td {
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    text-align: start;
+    font-size: 14px;
+  }
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color);
+}
+
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-btn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+button:disabled {
+  background-color: var(--light-gray);
+  cursor: not-allowed;
 }

@@ -1,9 +1,5 @@
-import { Component } from '@angular/core';
-import {HeaderComponent} from '../../common-ui/header/header.component';
-import {
-  CourseHeaderComponentComponent
-} from '../../common-ui/course-header-component/course-header-component.component';
-import {CourseTableComponentComponent} from '../../common-ui/course-table-component/course-table-component.component';
+import {Component} from '@angular/core';
+import {HeaderComponent} from '../../common/components/header/header.component';
 
 @Component({
   selector: 'app-dashboard-page',

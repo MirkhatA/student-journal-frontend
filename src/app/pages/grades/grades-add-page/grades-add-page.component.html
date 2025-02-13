@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<div class="container">
+  <h1 class="mt16 mb16">{{ isEditMode ? 'Edit Grade' : 'Add Grade' }}</h1>
+
+  <form [formGroup]="gradeForm" (ngSubmit)="onSubmit()" class="edit-form">
+    <label>Subject</label>
+    <input type="text" formControlName="subject" required />
+
+    <label>Score</label>
+    <input type="number" formControlName="score" required min="0" max="100" />
+
+    <button class="submit-btn" type="submit" [disabled]="gradeForm.invalid">Add Grade</button>
+  </form>
+</div>
